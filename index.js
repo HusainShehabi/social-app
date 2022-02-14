@@ -7,7 +7,8 @@ const { MONGODB } = require('./config.js');
 
 const server = new ApolloServer({
   typeDefs, 
-  resolvers
+  resolvers,
+  context: ( { req } ) => ( { req } )
 });
 
 mongoose.connect(MONGODB, { useNewUrlParser: true })//connection string from mongoDB cluster
@@ -18,3 +19,4 @@ mongoose.connect(MONGODB, { useNewUrlParser: true })//connection string from mon
     .then(res => {
         console.log(`Server running at ${res.url}`)
     })
+
