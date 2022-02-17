@@ -18,7 +18,7 @@ function App() {
       <Routes>
       <Route exact path="/" element={<Home />}/>
       <Route exact path="/login" element={<Login />}/>
-      <Route exact path="/register" element={<Register />}/> //not rendering
+      <Route exact path="/register" element={<Register />}/> 
       </Routes> 
       </Container>
     </Router>
